@@ -1,0 +1,45 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="styling login.css"> <!-- CSS-Datei für das Styling der Login-Seite -->
+</head>
+
+
+<body>
+
+  <form id="loginForm">
+    <label>Benutzername: <input type="text" id="username"></label><br>
+    <label>Passwort: <input type="password" id="password"></label><br>
+    <button type="submit">Anmelden</button>
+  </form>
+  
+  <script>
+    // Holt das Login-Formular
+    let login = document.getElementById('loginForm');
+
+    // Funktion für die Login-Prüfung
+    function dologin(e) {
+      e.preventDefault(); // Verhindert das Standard-Absenden des Formulars
+      
+      // Prüft Benutzername und Passwort
+      if (
+        document.getElementById('username').value === 'admin' &&
+        document.getElementById('password').value === 'ZeRo9mm_'
+      ) {
+        localStorage.setItem('loggedIn', 'true'); // Login-Status im Browser speichern
+        console.log('Login erfolgreich'); 
+        window.location.href = 'index.html'; // Weiterleitung zur Hauptseite
+      } else {
+        alert('Falsche Zugangsdaten!'); // Fehlermeldung bei falschen Daten
+      }
+    };
+
+    // EventListener für das Absenden des Formulars
+    login.addEventListener('submit', (event) => dologin(event));
+  </script>
+</body>
+</html>

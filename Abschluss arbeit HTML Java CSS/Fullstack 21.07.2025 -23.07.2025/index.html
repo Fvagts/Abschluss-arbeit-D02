@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abschluss Arbeit</title>
+    <link rel="stylesheet" href="Styling.css"> <!-- Bindet das Haupt-CSS ein -->
+    <script src="script.js" defer></script>    <!-- Bindet das Haupt-JavaScript ein -->
+</head>
+<body>
+    <script>
+        // Prüft, ob der Nutzer eingeloggt ist, sonst Weiterleitung zur Login-Seite
+        if (localStorage.getItem('loggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+
+    <header>
+        <div class="nav-container">
+            <nav class="link-box">
+                <!-- Navigation: Verweise auf die einzelnen Bereiche der Seite -->
+                <a href="#start">Start</a>
+                <a href="#bilder">Bilder</a>
+                <a href="#text">Text</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#social">Social Media</a>
+                <a href="#wetter">Wetter & Karte</a>
+                <a href="#kino">Kino</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Start-Bereich: Begrüßung und Einleitung -->
+        <section id="start">
+            <h1>Willkommen zu meiner Abschlussarbeit</h1>
+            <p>Dies ist eine umfangreiche Webseite als Abschlussprojekt. Hier findest du verschiedene Bereiche, Bilder und Kontaktmöglichkeiten.</p>
+        </section>
+
+        <!-- Bildergalerie-Bereich -->
+        <section id="bilder" class="imgbox">
+            <h2>Bildergalerie</h2>
+            <img src="BMW hintergrund.png" alt="BMW Hintergrund" style="max-width:300px;">
+            <img src="beispielbild2.jpg" alt="Beispielbild 2" style="max-width:300px;">
+            <img src="beispielbild3.jpg" alt="Beispielbild 3" style="max-width:300px;">
+        </section>
+
+        <!-- Text-Bereich: Projektbeschreibung -->
+        <section id="text">
+            <h2>Über das Projekt</h2>
+            <p>
+                Dieses Projekt wurde erstellt, um die erlernten Fähigkeiten in HTML, CSS und JavaScript zu demonstrieren.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit labore inventore ducimus. Necessitatibus quos, accusantium modi fuga sapiente aut, optio eligendi eos ipsam ipsum deleniti minima doloribus quis reiciendis voluptates.
+            </p>
+        </section>
+
+        <!-- Kontakt-Bereich: Kontaktformular -->
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <form>
+                <label>Name:<br><input type="text" name="name"></label><br>
+                <label>Email:<br><input type="email" name="email"></label><br>
+                <label>Nachricht:<br><textarea name="nachricht" rows="4"></textarea></label><br>
+                <button type="submit">Absenden</button>
+            </form>
+        </section>
+
+        <!-- Social Media-Bereich: Verweise auf Instagram und Facebook -->
+        <section id="social">
+            <h2>Folge uns auf Social Media</h2>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram" style="width:40px;vertical-align:middle;"> Instagram
+            </a>
+            <br>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" style="width:40px;vertical-align:middle;"> Facebook
+            </a>
+        </section>
+
+        <!-- Wetter-Bereich: Wetter-Widget und Karte -->
+        <section id="wetter">
+            <h2>Wetter & Karte</h2>
+            <div style="margin-bottom:20px;">
+                <!-- Wetter Widget von wetter.com (Beispiel für Berlin) -->
+                <iframe src="https://www.wetter.com/widgets/forecast?location=Berlin" width="100%" height="200" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div>
+                <!-- OpenStreetMap Karte (Beispiel für Berlin) -->
+                <iframe width="100%" height="300" frameborder="0" scrolling="no"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=13.375%2C52.515%2C13.405%2C52.525&amp;layer=mapnik">
+                </iframe>
+                <br>
+                <small>
+                    <a href="https://www.openstreetmap.org/#map=15/52.5200/13.4050" target="_blank">Größere Karte anzeigen</a>
+                </small>
+            </div>
+        </section>
+
+        <!-- Kino-Bereich: YouTube-Suchleiste und Beispielvideos -->
+        <section id="kino">
+            <h2>Kino</h2>
+            <p>Hier kannst du ausgewählte Filme und Trailer direkt anschauen oder ein eigenes YouTube-Video abspielen:</p>
+            <form id="youtubeSearchForm" style="margin-bottom:20px;">
+                <input type="text" id="youtubeSearchInput" placeholder="YouTube-Link einfügen..." style="width:300px; padding:6px;">
+                <button type="submit">Video abspielen</button>
+            </form>
+            <div id="youtubePlayerArea" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+                <div>
+                    <h3>Film 1: Beispiel Trailer</h3>
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                        title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div>
+                    <h3>Film 2: Beispiel Trailer</h3>
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/ysz5S6PUM-U"
+                        title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: Copyright und Logout-Button -->
+    <footer style="margin-top:40px; text-align:center;">
+        &copy; 2025 Abschlussarbeit. Alle Rechte vorbehalten.
+        <button onclick="localStorage.removeItem('loggedIn'); window.location.href='login.html';" style="margin-left:20px;">Logout</button>
+    </footer>
+</body>
+</html>

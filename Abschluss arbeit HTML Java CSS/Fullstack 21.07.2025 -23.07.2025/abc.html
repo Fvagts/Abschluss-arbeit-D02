@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abschluss Arbeit</title>
+    <link rel="stylesheet" href="Styling.css"> <!-- CSS-Datei einbinden -->
+    <script src="script.js" defer></script> <!-- JavaScript-Datei einbinden -->
+    
+</head>
+<body>
+    <script>
+   if (localStorage.getItem('loggedIn') !== 'true') {
+    window.location.href = 'login.html';
+  }
+
+</script>
+    <div class="link-box">
+   <a href="#start">Start</a>
+   <a href="#bilder">Bilder</a>
+   <a href="#text">Text</a>
+ </div>
+ <h1 id start>Dies ist meine abschluss arbeit ich bin überschrift H1</h1>
+  <div id="bilder" class="imgbox">
+ <img id bilder src="BMW hintergrund.png" alt="Die ist ein Bild"> <!-- Bild einfügen -->
+ </div>
+ <p id text>
+  Ich bin ein text erstellt mit Lorem "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit labore inventore ducimus. Necessitatibus quos, accusantium modi fuga sapiente aut, optio eligendi eos ipsam ipsum deleniti minima doloribus quis reiciendis voluptates."
+ </p>
+</body>
+</html>
