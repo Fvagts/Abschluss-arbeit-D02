@@ -1,0 +1,66 @@
+/* --- Grundlegendes Body-Styling --- */
+body {
+    font-family: Arial, sans-serif; /* Schriftart für die ganze Seite */
+    background-color: #00fe0d;      /* Hintergrundfarbe der Seite */
+    margin: 0;                      /* Kein Außenabstand */
+    padding: 20px;                  /* Innenabstand */
+}
+
+/* --- Box für die Navigation (älteres Styling, kann entfernt werden) --- */
+div.link-box{
+    padding: 30px;                  /* Innenabstand */
+    background-color: rgb(0, 235, 243); /* Hintergrundfarbe */
+    color: black;                   /* Textfarbe */
+    text-align: center;             /* Zentrierter Text */
+}
+
+/* --- Link-Styling --- */
+a{
+    color: #f6f6f6;                 /* Linkfarbe */
+}
+
+/* --- Bild-Styling --- */
+img{
+    width: 300px;                   /* Maximale Breite für Bilder */
+}
+
+/* --- Bildergalerie zentrieren --- */
+div.imgbox{
+text-align: center;             /* Bilder in der Galerie zentrieren */
+}
+
+/* --- Navigation-Kasten um die Verweise --- */
+.nav-container {
+    display: flex;                  /* Flexbox für horizontale Anordnung */
+    justify-content: center;        /* Zentriert die Navigation */
+    align-items: center;            /* Vertikal zentriert */
+    margin: 24px 0;                 /* Abstand oben und unten */
+    gap: 18px;                      /* Abstand zwischen Navigation und Logout-Button */
+}
+
+/* --- Navigation selbst (Verweis-Liste) --- */
+.link-box {
+    background: #ff0000;            /* Hintergrundfarbe Navigation */
+    border: 2px solid #2980b9;      /* Rahmenfarbe */
+    border-radius: 10px;            /* Abgerundete Ecken */
+    padding: 12px 28px;             /* Innenabstand */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07); /* Schatten */
+    display: flex;                  /* Flexbox für Links */
+    gap: 18px;                      /* Abstand zwischen Links */
+}
+
+/* --- Logout-Button Styling --- */
+.logout-btn {
+    margin-left: 18px;              /* Abstand zur Navigation */
+    padding: 8px 18px;              /* Innenabstand */
+    background: #2980b9;            /* Hintergrundfarbe */
+    color: #fff;                    /* Schriftfarbe */
+    border: none;                   /* Kein Rahmen */
+    border-radius: 6px;             /* Abgerundete Ecken */
+    font-size: 1rem;                /* Schriftgröße */
+    cursor: pointer;                /* Zeiger beim Überfahren */
+    transition: background 0.2s;    /* Animation beim Hover */
+}
+.logout-btn:hover {
+    background: #1a5276;            /* Farbe beim Überfahren */
+}

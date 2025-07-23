@@ -1,0 +1,14 @@
+body {
+  background: linear-gradient(120deg, #2980b9, #6dd5fa); /* Farbverlauf als Hintergrund */
+  min-height: 100vh;           /* Seite mindestens so hoch wie der Bildschirm */
+  display: flex;               /* Flexbox für Zentrierung */
+  align-items: center;         /* Vertikal zentrieren */
+  justify-content: center;     /* Horizontal zentrieren */
+  font-family: Arial, sans-serif; /* Schriftart */
+  margin: 0;                   /* Kein Außenabstand */
+}
+
+/* --- Stellt sicher, dass die Seite immer die volle Höhe hat --- */
+html, body {
+  height: 100%;
+}
